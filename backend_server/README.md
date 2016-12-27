@@ -1,10 +1,6 @@
 # Python Backend
 This is a RESTful server for the Message Board app
 
-### Summary
-
-[summary]: https://github.com/rappab/Message-Board/blob/master/backend_server/Backend%20Summary.pdf
-
 ### URL Structure
 | Resource | POST | GET | PUT | DELETE |
 | -------- | ---- | --- | --- | ------ |
