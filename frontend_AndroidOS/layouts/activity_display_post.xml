@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/postLayout">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/postArea">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:textAlignment="viewStart"
+            android:textSize="24sp"
+            android:background="@color/common_google_signin_btn_text_light_focused"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:text="Submitted by: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/author"
+            android:textAlignment="viewStart"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:textSize="18sp"
+            android:layout_margin="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="Edit Post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:elevation="0dp"
+            android:background="#b5cfbe"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Delete Post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete"
+            android:layout_alignParentBottom="true"
+            android:elevation="0dp"
+            android:background="#d65858"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+</RelativeLayout>

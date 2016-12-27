@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+
+    <TextView
+        android:text="User Profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:background="@color/common_google_signin_btn_text_light_disabled"
+        android:layout_margin="20dp" />
+
+    <TextView
+        android:text="Username: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/flash"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="Remove AutoLogin"
+            android:onClick="forgetUser"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/button3"
+            android:textSize="12sp"
+            android:layout_alignStart="@+id/delete"
+            android:layout_margin="10dp"
+            android:layout_weight="0.25" />
+
+        <Button
+            android:text="Logout"
+            android:onClick="logout"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/button5"
+            android:textSize="12sp"
+            android:layout_margin="10dp"
+            android:layout_alignStart="@+id/button3"
+            android:layout_weight="0.25" />
+
+        <Button
+            android:text="Delete Account"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/delete"
+            android:onClick="buttonClick"
+            android:background="@android:color/holo_red_dark"
+            android:textSize="12sp"
+            android:textStyle="normal|bold"
+            android:layout_weight="0.25"
+            android:layout_margin="15dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

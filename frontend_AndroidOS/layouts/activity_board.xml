@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:text="Board: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/boardTitle"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:background="@color/common_google_signin_btn_text_light_focused"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <LinearLayout
+        android:id="@+id/postList"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/boardTitle"></LinearLayout>
+
+    <ImageButton
+        android:id="@+id/createPost"
+        android:onClick="createPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:elevation="0dp"  />
+
+</RelativeLayout>
