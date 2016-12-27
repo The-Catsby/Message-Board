@@ -1,0 +1,72 @@
+Tests for backend API
+1. Users
+2. Boards
+
+
+1. USERS:
+
+	CREATE USERS
+		curl --data "username=testUser_1" --data "password=pa33word123" --data "action=register" -H "Accept: application/json" http://localhost:9080/user
+
+
+	LIST USERS
+		curl -H "Accept: application/json" http://localhost:9080/user
+
+	GET USERS BY ID (replace # with ID)
+		curl -H "Accept: application/json" http://localhost:9080/user/5118776383111168
+		curl -H "Accept: application/json" http://localhost:9080/user/5681726336532480
+		curl -H "Accept: application/json" http://localhost:9080/user/6244676289953792
+
+	UPDATE USER BY ID
+		curl -X UPDATE --data "username=UpdatedName" -H "Accept: application/json" http://localhost:9080/user/5681726336532480
+		curl -X UPDATE --data "email=FancyNewEmail@email.com" -H "Accept: application/json" http://localhost:9080/user/5681726336532480
+
+
+	DELETE USER BY ID
+		curl -X DELETE -H "Accept: application/json" http://localhost:9080/user/5681726336532480
+		curl -X DELETE -H "Accept: application/json" http://localhost:9080/user/5118776383111168
+		curl -X DELETE -H "Accept: application/json" http://localhost:9080/user/6244676289953792
+
+	DELETE ALL USERS
+		curl -X DELETE -H "Accept: application/json" http://localhost:9080/user
+
+2. BOARDS
+
+	CREATE BOARDS
+		curl --data-urlencode "name=Test Board 1" -d "users[]=5100084685438976" -d "users[]=5663034638860288"  -H "Accept: application/json" http://localhost:9080/board
+
+		curl --data-urlencode "name=Test Board 2" -H "Accept: application/json" http://localhost:9080/board
+
+	LIST BOARDS
+			curl -H "Accept: application/json" http://localhost:9080/board
+			curl -H "Accept: application/json" https://cs496backendapi-151019.appspot.com/board -k
+
+	GET BOARDS BY ID
+		curl -H "Accept: application/json" http://localhost:9080/board/5259513871466496
+		curl -H "Accept: application/json" http://localhost:9080/board/6385413778309120
+
+	PUT User in Board:
+			curl -X PUT -H "Accept: application/json" http://localhost:9080/board/5222955109842944/user/5785905063264256
+
+	Remove User from Board
+		curl -X DELETE -H "Accept: application/json" http://localhost:9080/board/6385413778309120/user/6526151266664448
+
+	DELETE BOARD BY ID
+		curl -X DELETE -H "Accept: application/json" http://localhost:9080/board/5259513871466496
+
+	DELETE ALL BOARDS
+		curl -X DELETE -H "Accept: application/json" http://localhost:9080/board
+
+3. POSTS
+
+	CREATE NEW POST
+		curl --data-urlencode "title=Post Title" --data-urlencode "content=this is the content of the post" -H "Accept: application/json" http://localhost:9080/board/5222955109842944/user/5785905063264256/post
+
+	List All Posts
+		curl -H "Accept: application/json" http://localhost:9080/post
+
+	Get Post by ID
+		curl -H "Accept: application/json" http://localhost:9080/post/4941480133132288
+
+	Delete POST by ID
+		curl -X DELETE -H "Accept: application/json" http://localhost:9080/post/4941480133132288
